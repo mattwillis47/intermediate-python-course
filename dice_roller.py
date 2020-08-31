@@ -4,7 +4,10 @@ def main():
   dice_sum = 0
   for i in range(0,dice_rolls):
     roll = random.randint(1,6)
-    print(f'You rolled a {roll}')
+    if roll == 1:
+      print(f'You rolled a {roll}! CRITICAL FAIL!!')
+    elif roll == 6:
+      print(f'You rolled a {roll}! CRITICAL SUCCESS!!')
     dice_sum += roll
   print(f'you have rolled a total of {dice_sum}')
 
